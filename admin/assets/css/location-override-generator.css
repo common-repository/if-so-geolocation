@@ -1,0 +1,648 @@
+.template-editor-title {
+  color: #3c434a;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 30px auto 30px 0;
+}
+
+/* editor style override */
+ifsotemplateeditor {
+  width: 100%;
+  margin: 0 auto 0 0;
+  padding: 0 0 0 30px;
+}
+div.ifso-pt-editor.inline .ifso-pt-editor-divider {
+  width: 100%;
+  height: 0;
+  line-height: 0;
+  text-align: center;
+  margin: 22px 0 32px;
+}
+div.ifso-pt-editor.inline .ifso-pt-editor-divider-line {
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  line-height: 0;
+  border-bottom: solid 1px #cacaca;
+  margin: 0 auto 0;
+}
+div.ifso-pt-editor.inline .ifso-pt-editor-section-title {
+  line-height: 1.1;
+  font-weight: 600;
+  font-size: 18px;
+}
+/* editor style override */
+
+
+
+
+
+
+
+/* generator menu css */
+.generator-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 20px;
+  align-items: baseline;
+  justify-content: center;
+  margin:  20px 20px 0 0;
+}
+
+.generator-sidebar {
+  top: 45px;
+  position: sticky;
+}
+
+.generator-menu-title {
+  line-height: 1.15;
+  margin: 15px 0 15px;
+}
+
+.dissonant-geo-types-error p{
+  width: auto;
+  display: inline-block;
+  padding: 5px;
+}
+
+
+@media (max-width: 800px) {
+  .generator-content {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+  }
+  .generator-menu {
+      order: 1;
+  }
+  .generator-sidebar {
+      order: 0;
+      position: static;
+  }
+}
+/* generator menu css */
+
+
+
+
+
+
+
+
+/* results tab css */
+.shortcode-generator-results {
+  text-align: center;
+}
+.shortcode-generator-results * {
+  color: #2c3338;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.shortcode-generator-results textarea {
+  box-sizing: border-box;
+  display: block;
+  resize: none;
+  width: 280px;
+  height: 100px;
+  padding: 5px 8px;
+  border: solid 1px #cacaca;
+  margin: 0 auto;
+  background-color: white;
+  cursor: auto;
+}
+
+.have-slim-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #C1C1C1;
+  border: 4px solid transparent;
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+.have-slim-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #A8A8A8;
+}
+.have-slim-scrollbar::-webkit-scrollbar {
+  width: 16px;
+}
+
+.shortcode-generator-results .copy-all-button {
+  position: relative;
+  text-align: center;
+  padding: 10px 16px 12px;
+  line-height: 1;
+  border-radius: 5px;
+  margin: 10px auto 20px;
+  cursor: pointer;
+}
+.shortcode-generator-results .copy-all-button span {
+  color: inherit;
+  position: relative;
+  top: -2px;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.shortcode-generator-results .copy-all-button.have-copy-indicator::before {
+  border-left-color: inherit;
+  left: -14px;
+}
+.shortcode-generator-results .copy-all-button.have-copy-indicator::after {
+  background-color: inherit;
+  font-size: 14px;
+  padding: 4px 8px;
+}
+
+.shortcode-generator-results .instructions {
+  width: 280px;
+  margin: 0 auto;
+}
+.shortcode-generator-results .instructions-link {
+  color: #2271b1;
+  font-style: italic;
+  display: inline-block;
+}
+
+
+.shortcode-generator-results .shortcode-error {
+  flex-direction: column;
+  margin: 0 0 20px;
+  display: none;
+}
+.shortcode-generator-results .shortcode-error.active {
+  display: inline-flex;
+}
+.shortcode-generator-results .shortcode-error label {
+  padding: 12px;
+  margin: 2px 0;
+  border-left: 4px solid #d63638;
+  background-color: #fff;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.shortcode-generator-results .copy-button-container {
+  width: 280px;
+  margin: 0 auto 20px;
+}
+
+.shortcode-generator-results .copy-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #888888;
+  background-color: #dddddd;
+  font-size: 14px;
+  padding: 1px 8px 2px;
+  margin: 0 0 0 auto;
+  border: unset;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+.shortcode-generator-results .copy-button:hover {
+  background-color: #cccccc;
+}
+.shortcode-generator-results .copy-button .copy-button-icon {
+  line-height: 1;
+  margin: 0 0 0 4px;
+  outline: none;
+}
+
+
+/* click indicator */
+.have-copy-indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -13px;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 8px solid #888888;
+}
+.have-copy-indicator::after {
+  content: "Copied!";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: calc(100% + 13px);
+  background-color: #888888;
+  color: white;
+  font-size: 12px;
+  padding: 1px 4px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.have-copy-indicator::before,
+.have-copy-indicator::after {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.1s linear, opacity 0.1s linear;
+}
+.have-copy-indicator.active::before,
+.have-copy-indicator.active::after {
+  visibility: visible;
+  opacity: 1;
+}
+/* click indicator */
+
+
+/* css for the preview element */
+.shortcode-generator-results .shortcode-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.shortcode-generator-results .preview-title {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4e738b;
+  margin: 0 0 5px;
+  cursor: auto
+}
+.shortcode-generator-results .preview-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  width: 280px;
+  min-height: 85px;
+  padding: 18px 10px;
+  border: solid 1px #cacaca;
+  margin: 0 0 20px; 
+  color: #1e0547;
+  background-color: white;
+  font-size: 20px;
+}
+.shortcode-generator-results .preview-container > label {
+  font-size: 14px;
+  color: #646970;
+  margin: auto;
+}
+
+.shortcode-generator-results .preview-container button { /* disable buttons inside the preivew */
+  pointer-events: none;
+}
+/* css for the preview element */
+/* results tab css */
+
+
+
+
+
+
+
+
+/* location override generator css */
+.location-override-generator h1 {
+  align-self: baseline;
+}
+
+.location-override-generator .header-description {
+  align-self: baseline;
+  font-size: inherit;
+  margin: 0 0 10px;
+}
+
+.location-override-generator .header-description a {
+  font-style: italic;
+}
+
+.location-override-generator .type-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+  margin: 8px 0 0;
+}
+.location-override-generator .type-option {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 5px;
+  width: 85px;
+  font-size: 16px;
+  text-align: center;
+  padding: 12px 0;
+  border: 1px solid #dcdcdc;
+  cursor: pointer;
+}
+.location-override-generator .type-option.selected {
+  outline: solid 2px #279EF1;
+  outline-offset: 1px;
+}
+.location-override-generator .type-option svg {
+  height: 40px;
+}
+
+.location-override-generator .add-locations-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #1E0547;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 18px 5px 5px;
+    border: solid 1px currentColor;
+    margin: 10px auto 25px;
+}
+.location-override-generator .add-locations-button span:nth-child(1) {
+  margin-right: 5px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.location-override-generator fieldset[name="orientation"] {
+  margin: 10px auto 0;
+}
+
+.location-override-generator fieldset[name="orientation"] label {
+  display: inline-block;
+  margin: 0 auto 4px;
+}
+
+.location-override-generator  fieldset[name="default-option"] {
+  margin: 30px auto 15px;
+}
+
+.location-override-generator  fieldset[name="button-value"] {
+  margin: 10px auto 0;
+}
+/* location override generator css */
+
+
+
+
+
+
+
+
+/* drag table css */
+.drag-table-wrapper {
+  display: block;
+  text-align: left;
+}
+
+.drag-table-wrapper .drag-table-content {
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  color: #1E0547;
+  text-align: left;
+  background: #ddd;
+  border-radius: 10px; 
+  padding: 20px 30px;
+  margin: 0 auto;
+}
+
+.drag-table-wrapper .drag-table-header {
+  font-size: 14px;
+  display: flex;
+  gap: 0;
+  margin: 0 auto 15px;
+  border-bottom: solid 2px #ADA7B7;
+}
+
+.drag-table-wrapper .drag-table-header :nth-child(1) {
+  width: 35px;
+}
+.drag-table-wrapper .drag-table-header :nth-child(2) {
+  width: 170px;
+}
+.drag-table-wrapper .drag-table-header :nth-child(3) {
+  width: 170px;
+}
+.drag-table-wrapper .drag-table-header :nth-child(4) {
+  width: 170px;
+}
+.drag-table-wrapper .drag-table-header :nth-child(5) {
+  width: 35px;
+}
+
+.drag-table-wrapper .drag-table-header :nth-child(4) {
+  display: none;
+}
+.drag-table-wrapper.redirects .drag-table-header :nth-child(4) {
+  display: unset;
+}
+
+.drag-table-wrapper .drag-table {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.drag-table-wrapper .location {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.drag-table-wrapper .location-handle {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: move;
+}
+
+.drag-table-wrapper .location-handle svg {
+  width: 15px;
+  fill: #ADA7B7;
+}
+
+.drag-table-wrapper .location-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.drag-table-wrapper .location-value {
+  display: inline-block;
+  width: 150px;
+  font-size: 16px;
+}
+
+.drag-table-wrapper .location-url-container {
+  display: none;
+}
+.drag-table-wrapper.redirects .location-url-container {
+  display: inline-flex;
+}
+
+.drag-table-wrapper input[type="text"] {
+  width: 150px;
+  color: inherit;
+  font-size: 16px;
+  text-align: left;
+  border: solid 1px currentColor;
+  border-radius: 0px;
+  padding: 2px 2px 0 2px;
+  line-height: unset;
+  min-height: unset;
+}
+
+.drag-table-wrapper .location-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.drag-table-wrapper .location-remove svg {
+  width: 15px;
+  stroke: #E04054;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+/* drag table css */
+
+
+
+
+
+
+
+/* shortcode generator css */
+.shortcode-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 20px;
+  font-size: 16px;
+}
+
+.shortcode-generator * {
+  box-sizing: border-box;
+}
+
+.shortcode-generator fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 20px;
+  align-self: stretch;
+}
+.shortcode-generator fieldset:disabled {
+  display: none;
+}
+
+.shortcode-generator fieldset fieldset {
+  margin: 4px 0 8px;
+}
+
+.shortcode-generator fieldset .fieldset-margin-top {
+  margin-top: 8px;
+}
+
+.shortcode-generator fieldset legend {
+  font-size: 18px;
+  padding: 20px 0 2px;
+  font-weight: 500;
+}
+
+.shortcode-generator input::placeholder,
+.shortcode-generator textarea::placeholder {
+  color: #333333;
+}
+
+.shortcode-generator input[type='text'] {
+  font-size: inherit;
+}
+
+.shortcode-generator input[type='number'] {
+  padding: 0 0 0 8px;
+  width: 3.2em;
+}
+.shortcode-generator input[type=number]::-webkit-inner-spin-button,
+.shortcode-generator input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+.shortcode-generator input[type='checkbox'] {
+  margin-left: 0;
+}
+
+.shortcode-generator input[name="submit"] {
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 20px auto 0;
+  border-radius: 25px;
+  border: solid 2px #1e0547;
+  color: #1e0547;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.shortcode-generator .description{
+  font-size: inherit;
+  font-style: italic;
+  margin: 0 0 14px;
+  /* border-bottom: 2px groove #f0f0f0; */
+  padding-bottom: 6px;
+}
+
+.shortcode-generator .vertical-menu {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, max-content);
+  grid-gap: 5px;
+}
+
+.shortcode-generator .texts-menu div:nth-child(odd) label {
+  display: inline-block;
+  width: 5.2em;
+}
+.shortcode-generator .texts-menu div:nth-child(even) {
+  margin-bottom: 4px;
+}
+
+.shortcode-generator .vertical-menu label {
+  text-align: left;
+}
+
+/* css for the tooltip functionality using the "tooltip" attribute */
+span[tooltip] {
+  position: relative;
+  color: #a2a2a2;
+  font-size: 8px;
+  text-decoration: none;
+  padding: 1px 5px;
+  border-radius: 50%;
+  border: 1px solid #a2a2a2;
+  margin: 0 0 0 3px;
+  cursor: pointer;
+}
+span[tooltip]:hover::after {
+  content: attr(tooltip);
+  position: absolute;
+  z-index: 99999;
+  top: 0;
+  left: calc(100% + 5px);
+  font-size: 14px;
+  color: #fff;
+  background-color: #444;
+  padding: 5px 10px;
+  width: 200px;
+}
+/* css for the tooltip functionality using the "tooltip" attribute */
+/* shortcode generator css */
+.ifso-geo-page-tab-geoOverride .compat-notice{
+  padding: 5px;
+  display:inline-block;
+}
